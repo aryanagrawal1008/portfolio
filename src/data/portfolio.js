@@ -54,7 +54,7 @@ export const stack = {
 }
 
 // ─── PROJECTS ────────────────────────────────────────────────────
-// Order: SkillSwap → BlogBook → CineFlix → Themis.AI → Bulk Cert
+// Order: SkillSwap → BlogBook → CineFlix → Portfolio → Themis.AI → Bulk Cert
 export const projects = [
   {
     id: 1,
@@ -103,6 +103,21 @@ export const projects = [
   },
   {
     id: 4,
+    title: "Personal Portfolio",
+    subtitle: "Interactive Developer Portfolio",
+    description: "A modern, responsive portfolio website built to showcase my skills, projects, and achievements. Features a dynamic UI with smooth animations and a clean design.",
+    features: [
+      "Responsive design for all devices",
+      "Dynamic data rendering from centralized configuration",
+      "Modern UI with smooth animations",
+      "Integrated with GitHub and LinkedIn",
+    ],
+    tech: ["React", "Vite", "CSS Modules"],
+    github: "https://github.com/aryanagrawal1008/portfolio",
+    live: "https://portfolio-ashen-phi-40.vercel.app/",
+  },
+  {
+    id: 5,
     title: "Themis.AI",
     subtitle: "AI-Powered Moot Court Simulator",
     description: "An immersive legal simulation platform where users argue cases against an AI judge, with real-time scoring and contextual performance feedback.",
@@ -117,7 +132,7 @@ export const projects = [
     live: "#",
   },
   {
-    id: 5,
+    id: 6,
     title: "Bulk Certificate Generator",
     subtitle: "Template-Based Certificate Automation",
     description: "A web app that batch-generates certificates from a template image and CSV data, with custom name placement and export in PDF & PPTX formats.",
