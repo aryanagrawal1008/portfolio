@@ -1,0 +1,97 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.card {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+/* Coloured left-border accent */
+.card::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: var(--accent, #27CBCB);
+  border-radius: 3px 0 0 3px;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent, #27CBCB);
+  box-shadow: 0 8px 32px rgba(39, 203, 203, 0.08);
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icon {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.typeBadge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--accent, #27CBCB);
+  border: 1px solid;
+  border-color: color-mix(in srgb, var(--accent, #27CBCB) 35%, transparent);
+  background: color-mix(in srgb, var(--accent, #27CBCB) 8%, transparent);
+  padding: 0.2rem 0.65rem;
+  border-radius: 50px;
+}
+
+.title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.4;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.issuer {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--accent, #27CBCB);
+}
+
+.dot {
+  color: #374151;
+  font-size: 0.8rem;
+}
+
+.date {
+  font-size: 0.78rem;
+  color: #4B5563;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.desc {
+  font-size: 0.87rem;
+  color: #6B7280;
+  line-height: 1.65;
+}
+
+@media (max-width: 768px) {
+  .grid { grid-template-columns: 1fr; }
+}

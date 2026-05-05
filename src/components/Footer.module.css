@@ -1,0 +1,24 @@
+.footer {
+  position: relative; z-index: 1;
+  border-top: 1px solid #1c1c1c;
+  padding: 2.5rem 0;
+  text-align: center;
+}
+
+.inner {
+  display: flex; flex-direction: column; align-items: center; gap: 0.6rem;
+}
+
+.logo {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1rem; font-weight: 700; color: #fff;
+  margin-bottom: 0.25rem;
+}
+.logo span { color: #27CBCB; }
+
+.copy { color: #4B5563; font-size: 0.88rem; }
+.heart { color: #ff6b6b; }
+.coffee { }
+.name { color: #27CBCB; }
+
+.sub { color: #2a2a2a; font-size: 0.78rem; }

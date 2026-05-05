@@ -1,0 +1,178 @@
+// ─── PERSONAL INFO ───────────────────────────────────────────────
+export const personal = {
+  name: "Aryan",
+  fullName: "Aryan Agrawal",
+  handle: "@aryanagrawal1008",
+  role: "Full-Stack Developer | MERN Stack Specialist",
+  college: "MAIT Delhi — B.Tech CSE (2024–2028)",
+  cgpa: "8.6",
+  location: "Delhi, India 🇮🇳",
+  email: "aryanagrawal1008@gmail.com",
+  mantra: "Design with intent. Develop with discipline.",
+  tagline: "Building things that just work.",
+  bio: "Full-Stack Developer specializing in the MERN Stack and scalable web architecture. Experienced in building P2P exchange platforms, CMS engines, and AI-powered solutions. Student Coordinator at TechCom, MAIT — managed HackWithMAIT 6.0 with 2600+ registrations.",
+  resumeUrl: "https://drive.google.com/file/d/1SsW8kV8m5GP5pw_6SblJ4E6U_S82Wt3K/view?usp=sharing",
+  github: "https://github.com/aryanagrawal1008",
+  linkedin: "https://www.linkedin.com/in/aryan-agrawal08/",
+  twitter: "",
+  instagram: "",
+}
+
+// ─── TECH STACK ──────────────────────────────────────────────────
+export const stack = {
+  frontend: [
+    { name: "React",        icon: "⚛️" },
+    { name: "Next.js",      icon: "▲"  },
+    { name: "JavaScript",   icon: "🟡" },
+    { name: "TypeScript",   icon: "🔷" },
+    { name: "Tailwind CSS", icon: "🎨" },
+    { name: "Bootstrap",    icon: "🅱️" },
+    { name: "HTML/CSS",     icon: "🖥️" },
+    { name: "Redux",        icon: "🔴" },
+  ],
+  backend: [
+    { name: "Node.js",   icon: "🟢" },
+    { name: "Express",   icon: "⚡" },
+    { name: "Python",    icon: "🐍" },
+    { name: "FastAPI",   icon: "🚀" },
+    { name: "REST APIs", icon: "🔗" },
+    { name: "JWT Auth",  icon: "🔐" },
+  ],
+  database: [
+    { name: "MongoDB",    icon: "🍃" },
+    { name: "MySQL",      icon: "🐬" },
+    { name: "MariaDB",    icon: "🗄️" },
+    { name: "PostgreSQL", icon: "🐘" },
+  ],
+  devops: [
+    { name: "Git/GitHub",   icon: "🐙" },
+    { name: "Vercel",       icon: "▲"  },
+    { name: "Render",       icon: "🎯" },
+    { name: "GitHub Pages", icon: "📄" },
+    { name: "Postman",      icon: "📮" },
+  ],
+}
+
+// ─── PROJECTS ────────────────────────────────────────────────────
+// Order: SkillSwap → BlogBook → CineFlix → Themis.AI → Bulk Cert
+export const projects = [
+  {
+    id: 1,
+    title: "SkillSwap",
+    subtitle: "Peer-to-Peer Skill Exchange Platform",
+    description: "A MERN-stack collaborative platform where users offer skills they have and request skills they want — with JWT auth and a custom Rating & Reputation system.",
+    features: [
+      "Browse & discover skills offered by others",
+      "Send & manage skill-swap requests",
+      "JWT-based authentication (register & login)",
+      "Custom rating & reputation system",
+    ],
+    tech: ["React", "Tailwind CSS", "Node.js", "MongoDB", "JWT"],
+    github: "https://github.com/aryanagrawal1008/skill-swap",
+    live: "https://skill-swap-jpcg.vercel.app/",
+  },
+  {
+    id: 2,
+    title: "BlogBook",
+    subtitle: "Full-Stack Blogging Platform",
+    description: "A scalable CMS engine with MongoDB aggregation pipelines — optimized backend performance by 80%. Supports full blog lifecycle from creation to publication.",
+    features: [
+      "Create, edit & publish blog posts",
+      "MongoDB aggregation for 80% faster queries",
+      "Admin dashboard with secure login",
+      "Paginated post feed with date sorting",
+    ],
+    tech: ["Node.js", "Express", "MongoDB", "Tailwind CSS", "EJS"],
+    github: "https://github.com/aryanagrawal1008/BlogBook",
+    live: "https://blogbook-9b5m.onrender.com/",
+  },
+  {
+    id: 3,
+    title: "CineFlix",
+    subtitle: "Movie Discovery Platform",
+    description: "A dynamic movie discovery app powered by the TMDB API. Users can explore films, filter by genre & IMDb rating, and manage a personalized Watch Later list.",
+    features: [
+      "Genre-based movie filtering & smart search",
+      "IMDb rating display per movie card",
+      "Personalized Watch Later list",
+      "Responsive grid layout with poster cards",
+    ],
+    tech: ["React", "Vite", "Bootstrap", "TMDB API"],
+    github: "https://github.com/aryanagrawal1008/CineFlix",
+    live: "https://aryanagrawal1008.github.io/CineFlix/",
+  },
+  {
+    id: 4,
+    title: "Themis.AI",
+    subtitle: "AI-Powered Moot Court Simulator",
+    description: "An immersive legal simulation platform where users argue cases against an AI judge, with real-time scoring and contextual performance feedback.",
+    features: [
+      "Real-time AI judging with contextual feedback",
+      "Case briefing & structured argument builder",
+      "Performance scoring & analytics dashboard",
+      "Voice input support for oral arguments",
+    ],
+    tech: ["React", "Python", "FastAPI", "Gemini AI", "MongoDB"],
+    github: "https://github.com/aryanagrawal1008/Themis.AI",
+    live: "#",
+  },
+  {
+    id: 5,
+    title: "Bulk Certificate Generator",
+    subtitle: "Template-Based Certificate Automation",
+    description: "A web app that batch-generates certificates from a template image and CSV data, with custom name placement and export in PDF & PPTX formats.",
+    features: [
+      "Upload image/PDF certificate templates",
+      "Custom name placement via drag-to-position",
+      "Batch PDF & PPTX export for all recipients",
+      "CSV/Excel import for bulk processing",
+    ],
+    tech: ["HTML/CSS/JS", "Python", "PIL", "python-pptx"],
+    github: "https://github.com/aryanagrawal1008/bulk-certificate-generator",
+    live: "#",
+  },
+]
+
+// ─── ACHIEVEMENTS & CERTIFICATIONS ───────────────────────────────
+export const achievements = [
+  {
+    id: 1,
+    type: "hackathon",
+    icon: "🏆",
+    title: "Smart India Hackathon (SIH) 2025",
+    issuer: "Government of India",
+    date: "2025",
+    description: "Team 'Pixel_Pandas' cleared the Internal Hackathon round and qualified for the National level with an AI-powered Kolam recognition app.",
+    color: "#FFD700",
+  },
+  {
+    id: 2,
+    type: "leadership",
+    icon: "🎯",
+    title: "HackWithMAIT 6.0 — Student Coordinator",
+    issuer: "TechCom, MAIT Delhi",
+    date: "2024",
+    description: "Managed a flagship department hackathon with 2600+ registrations and 200+ on-campus participants.",
+    color: "#26D868",
+  },
+  {
+    id: 3,
+    type: "certificate",
+    icon: "📜",
+    title: "React.js Professional Certificate",
+    issuer: "Scaler",
+    date: "July 2025",
+    description: "Completed advanced React.js course covering hooks, state management, performance optimization and component architecture.",
+    color: "#27CBCB",
+  },
+  {
+    id: 4,
+    type: "certificate",
+    icon: "📜",
+    title: "JavaScript Mastery Certification",
+    issuer: "Knowledge Gate",
+    date: "July 2025",
+    description: "Comprehensive JavaScript certification covering ES6+, async patterns, closures, the event loop and DOM manipulation.",
+    color: "#27CBCB",
+  },
+]

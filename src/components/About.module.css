@@ -1,0 +1,99 @@
+.grid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+/* ── Profile ── */
+.profileCard {
+  padding: 2rem 1.5rem;
+  display: flex; flex-direction: column; align-items: center;
+  gap: 1rem; text-align: center;
+}
+
+.avatarRing {
+  width: 110px; height: 110px; border-radius: 50%;
+  padding: 3px;
+  background: linear-gradient(135deg, #27CBCB, #26D868);
+}
+.avatarImg {
+  width: 100%; height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.avatarInner {
+  width: 100%; height: 100%; border-radius: 50%;
+  background: #111;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2.8rem; font-weight: 800; color: #27CBCB;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.handle {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9rem; color: #27CBCB;
+}
+
+.tags { display: flex; flex-direction: column; gap: 0.5rem; width: 100%; }
+.tag {
+  font-size: 0.78rem; color: #9CA3AF;
+  border: 1px solid #1c1c1c;
+  padding: 0.3rem 0.8rem; border-radius: 50px;
+  background: #0a0a0a;
+}
+
+.statRow {
+  display: flex; align-items: center; gap: 0;
+  width: 100%; margin-top: 0.5rem;
+  background: #0a0a0a;
+  border: 1px solid #1c1c1c;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.stat {
+  flex: 1; padding: 0.75rem 0.5rem;
+  display: flex; flex-direction: column; align-items: center; gap: 0.2rem;
+}
+.statNum { font-size: 1.2rem; font-weight: 800; color: #27CBCB; font-family: 'JetBrains Mono', monospace; }
+.statLabel { font-size: 0.68rem; color: #4B5563; text-transform: uppercase; letter-spacing: 0.5px; }
+.statDivider { width: 1px; height: 40px; background: #1c1c1c; }
+
+/* ── Bio ── */
+.bioCard { padding: 2rem; }
+
+.bio {
+  color: #9CA3AF; line-height: 1.75; margin-bottom: 1.5rem;
+}
+
+.quote {
+  font-style: italic;
+  color: #6B7280;
+  border-left: 2px solid #27CBCB;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.65;
+  font-size: 0.95rem;
+  background: rgba(39,203,203,0.03);
+  border-radius: 0 8px 8px 0;
+}
+.quoteIcon { color: #27CBCB; font-size: 1.2rem; font-style: normal; }
+
+.interests { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.75rem; }
+.chip {
+  font-size: 0.78rem;
+  padding: 0.3rem 0.85rem;
+  border-radius: 50px;
+  background: rgba(39,203,203,0.07);
+  border: 1px solid rgba(39,203,203,0.2);
+  color: #27CBCB;
+}
+
+.bioActions { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+
+@media (max-width: 768px) {
+  .grid { grid-template-columns: 1fr; }
+}

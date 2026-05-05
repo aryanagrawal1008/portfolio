@@ -1,0 +1,186 @@
+/* ── RESET ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ── VARIABLES ── */
+:root {
+  --cyan:   #27CBCB;
+  --green:  #26D868;
+  --yellow: #FFD700;
+  --bg:     #000000;
+  --card:   #0d0d0d;
+  --card2:  #111111;
+  --border: #1c1c1c;
+  --text:   #ffffff;
+  --muted:  #9CA3AF;
+  --dim:    #4B5563;
+  --mono:   'JetBrains Mono', monospace;
+  --sans:   'Inter', system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; font-family: inherit; }
+img { max-width: 100%; }
+
+/* ── GRID BG ── */
+.bg-grid {
+  position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* ── GLOW ORBS ── */
+.glow-orb {
+  position: fixed; border-radius: 50%;
+  filter: blur(100px); pointer-events: none; z-index: 0;
+}
+.glow-orb-1 {
+  width: 500px; height: 500px; top: -180px; left: -180px;
+  background: radial-gradient(circle, rgba(39,203,203,0.13) 0%, transparent 70%);
+  animation: floatOrb 10s ease-in-out infinite alternate;
+}
+.glow-orb-2 {
+  width: 450px; height: 450px; bottom: -150px; right: -150px;
+  background: radial-gradient(circle, rgba(38,216,104,0.09) 0%, transparent 70%);
+  animation: floatOrb 12s ease-in-out infinite alternate-reverse;
+}
+
+/* ── CONTENT WRAPPER ── */
+.container {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+/* ── SECTION ── */
+.section {
+  position: relative; z-index: 1;
+  padding: 5rem 0;
+}
+
+.section-tag {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--cyan);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.section-title {
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 0.75rem;
+}
+
+.section-title span { color: var(--cyan); }
+
+.section-sub {
+  color: var(--muted);
+  font-size: 1rem;
+  max-width: 520px;
+  margin-bottom: 3rem;
+}
+
+/* ── DIVIDER ── */
+.divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 0;
+}
+
+/* ── BUTTONS ── */
+.btn {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.72rem 1.6rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1.5px solid transparent;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s, border-color 0.2s, color 0.2s;
+}
+.btn:hover { transform: translateY(-2px); }
+
+.btn-green {
+  background: var(--green);
+  color: #000;
+  border-color: var(--green);
+}
+.btn-green:hover { box-shadow: 0 0 20px rgba(38,216,104,0.4); }
+
+.btn-outline {
+  background: transparent;
+  color: var(--text);
+  border-color: #333;
+}
+.btn-outline:hover { border-color: var(--cyan); color: var(--cyan); }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--muted);
+  border-color: var(--border);
+  font-family: var(--mono);
+  font-size: 0.8rem;
+}
+.btn-ghost:hover { border-color: var(--cyan); color: var(--cyan); }
+
+/* ── CARD BASE ── */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+.card:hover {
+  border-color: #2a2a2a;
+  box-shadow: 0 8px 40px rgba(39,203,203,0.06);
+}
+
+/* ── REVEAL ANIMATIONS ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── KEYFRAMES ── */
+@keyframes floatOrb {
+  from { transform: translate(0,0); }
+  to   { transform: translate(40px, 40px); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(-2deg); }
+  50%       { transform: translateY(-10px) rotate(-2deg); }
+}
+
+@keyframes floatBadge {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-6px); }
+}
