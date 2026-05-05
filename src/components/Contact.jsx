@@ -39,10 +39,39 @@ export default function Contact() {
     return () => obs.disconnect()
   }, [])
 
-  const handleSubmit = e => {
+  const handleSubmit = async e => {
     e.preventDefault()
     setStatus('sending')
-    setTimeout(() => { setStatus('sent'); setForm({ name: '', email: '', message: '' }) }, 1400)
+    
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: import.meta.env.VITE_WEB3FORMS_KEY,
+          name: form.name,
+          email: form.email,
+          message: form.message,
+        }),
+      });
+      
+      const result = await response.json();
+      if (result.success) {
+        setStatus('sent');
+        setForm({ name: '', email: '', message: '' });
+      } else {
+        console.error("Error sending message:", result);
+        setStatus('idle');
+        alert("Something went wrong while sending your message. Please try again later.");
+      }
+    } catch (error) {
+      console.error("Fetch error:", error);
+      setStatus('idle');
+      alert("Something went wrong! Please check your connection and try again.");
+    }
   }
 
   return (
